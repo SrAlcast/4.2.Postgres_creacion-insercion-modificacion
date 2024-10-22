@@ -57,6 +57,8 @@ CREATE TABLE Detalle_Envios (
     precio_unitario NUMERIC(10, 2) not null,
     FOREIGN KEY (id_envio) 
     	REFERENCES Envios(id_envio)
+	on delete restrict
+    	on update cascade
 );
 
 -- Crear tabla Regiones
